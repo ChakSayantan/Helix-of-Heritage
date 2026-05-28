@@ -1,2 +1,14 @@
-# Helix-of-Heritage-
+# Helix-of-Heritage
 Helix‑of‑Heritage is an interactive family tree visualization that fuses genealogy with DNA‑inspired design. Explore roots, branches, and generational stories through a dynamic interface that encodes heritage like a living genetic map.
+
+# How to Run
+- Open Terminal:
+    Either in VS Code Terminal 
+    Or Win + R > cmd > cd folder_name 
+    Or Move to folder and run cmd on address bar.
+- Run on Terminal: 
+    python -m http.server 8000
+- Hit on Browser: 
+    http://localhost:8000/index.html
+
+N.B. Recommended Screen Zoom 80%
