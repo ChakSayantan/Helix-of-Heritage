@@ -1,0 +1,128 @@
+[
+  {
+    "id": "1",
+    "name": "স্যমন্তক চক্রবর্ত্তী",
+    "photo": "images/heritage_tree/Syamantak.jpg",
+    "father": "2",
+    "mother": "3"
+  },
+  {
+    "id": "2",
+    "name": "সায়ন্তন চক্রবর্ত্তী",
+    "photo": "images/heritage_tree/Sayantan.jpg",
+    "father": "4",
+    "mother": "5"
+  },
+  {
+    "id": "3",
+    "name": "অনিশা দত্ত",
+    "photo": "images/heritage_tree/Anisha.jpg",
+    "father": "6",
+    "mother": "7"
+  },
+  {
+    "id": "4",
+    "name": "কুন্তল চক্রবর্ত্তী",
+    "photo": "images/heritage_tree/Kuntal.jpg",
+    "father": "11",
+    "mother": "12"
+  },
+  {
+    "id": "5",
+    "name": "সুমিতা চক্রবর্ত্তী",
+    "photo": "images/heritage_tree/Sumita.jpg",
+    "father": "13",
+    "mother": "14"
+  },
+  {
+    "id": "6",
+    "name": "অমল কুমার দত্ত",
+    "photo": "images/heritage_tree/Amal.jpg",
+    "father": "15",
+    "mother": "16"
+  },
+  {
+    "id": "7",
+    "name": "শম্পা দত্ত",
+    "photo": "images/heritage_tree/Shampa.jpg",
+    "father": "17",
+    "mother": "18"
+  },
+  {
+    "id": "8",
+    "name": "অনন্তা দত্ত",
+    "photo": "images/heritage_tree/Ananta.jpg",
+    "father": "6",
+    "mother": "7"
+  },
+  {
+    "id": "9",
+    "name": "কুনাল চক্রবর্ত্তী",
+    "photo": "images/heritage_tree/Kunal.jpg",
+    "father": "11",
+    "mother": "12"
+  },
+  {
+    "id": "10",
+    "name": "সুলতা চক্রবর্ত্তী",
+    "photo": "images/heritage_tree/Sulata.jpg",
+    "father": "",
+    "mother": ""
+  },
+  {
+    "id": "11",
+    "name": "মণীন্দ্রনাথ চক্রবর্ত্তী",
+    "photo": "images/heritage_tree/Manindranath.jpg",
+    "father": "",
+    "mother": ""
+  },
+  {
+    "id": "12",
+    "name": "রেখা চক্রবর্ত্তী",
+    "photo": "images/heritage_tree/Rekha.jpg",
+    "father": "",
+    "mother": ""
+  },
+  {
+    "id": "13",
+    "name": "হিমাংশু সুন্দর ঘোষ",
+    "photo": "images/heritage_tree/Himangshu.jpg",
+    "father": "",
+    "mother": ""
+  },
+  {
+    "id": "14",
+    "name": "কল্পনা ঘোষ",
+    "photo": "images/heritage_tree/Kalpana.jpg",
+    "father": "",
+    "mother": ""
+  },
+  {
+    "id": "15",
+    "name": "শৈলজা কুমার দত্ত",
+    "photo": "images/heritage_tree/Shailaja.jpg",
+    "father": "",
+    "mother": ""
+  },
+  {
+    "id": "16",
+    "name": "সাবিত্রী দত্ত",
+    "photo": "images/heritage_tree/Sabitri.jpg",
+    "father": "",
+    "mother": ""
+  },
+  {
+    "id": "17",
+    "name": "সুশীল সেন",
+    "photo": "images/heritage_tree/Sushil.jpg",
+    "father": "",
+    "mother": ""
+  },
+  {
+    "id": "18",
+    "name": "শিখা সেন",
+    "photo": "images/heritage_tree/Shikha.jpg",
+    "father": "",
+    "mother": ""
+  }
+]

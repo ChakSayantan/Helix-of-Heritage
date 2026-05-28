@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bukayo's Heritage Tree</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Dropdown selector -->
+  <div id="viewSelector">
+    <select id="treeMode">
+      <option value="heritage" selected>Heritage Tree</option>
+      <option value="lineage">Lineage</option>
+    </select>
+  </div>
+
+  <!-- Lineage-specific dropdown (hidden by default) -->
+  <div id="lineageSelector" style="display:none; position:absolute; top:60px; left:10px; z-index:1100;">
+    <select id="lineageMode">
+      <option value="gen5">Lineage till Gen5</option>
+      <option value="complete" selected>Complete Lineage</option>
+    </select>
+  </div>
+
+  <!-- Main headline -->
+  <header id="mainHeader">
+    Bukayo's Roots and Branches
+  </header>
+
+  <div id="tree"></div>
+  <div id="infoPanel"></div>
+
+  <!-- D3.js library -->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

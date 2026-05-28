@@ -1,0 +1,126 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Dropdown selector */
+#viewSelector {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 1100;
+}
+
+#viewSelector select {
+  padding: 6px 10px;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+/* Main headline */
+#mainHeader {
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  padding: 25px 0;
+  background: linear-gradient(to right, #99ccff, #2c3e50);
+  color: #fff8f0;
+  letter-spacing: 2px;
+  border-bottom: 3px solid #264653;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Tree visualization area */
+#tree {
+  width: 100%;
+  height: calc(100vh - 80px);
+  background: radial-gradient(circle at center, #fffbea, #e6f2ff, #99ccff);
+}
+
+/* Heritage mode background */
+#tree.heritage {
+  background: url("images/tree_background.png") no-repeat center center;
+  background-size: cover;
+}
+
+/* Sliding info panel (Lineage mode only) */
+#infoPanel {
+  width: 30%;
+  height: calc(100vh - 80px);
+  position: fixed;
+  top: 80px;
+  right: -30%;
+  background: #2c3e50;
+  border-left: 1px solid #ccc;
+  box-shadow: -2px 0 8px rgba(0,0,0,0.2);
+  transition: right 0.4s ease;
+  overflow-y: auto;
+  color: #fff;
+  z-index: 999;
+}
+
+#infoPanel.active {
+  right: 0;
+}
+
+#infoPanel .content {
+  background: #fff8f0;
+  color: #000000;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 8px;
+  text-align: center;
+  position: relative; /* needed for close tab positioning */
+}
+
+#infoPanel .content img {
+  display: block;
+  margin: 20px auto;
+  max-width: 80%;
+  border-radius: 8px;
+}
+
+/* Labels */
+.node-label {
+  font-size: 14px;
+  font-weight: bold;
+  fill: #000;
+  paint-order: stroke;
+  stroke: #fff8f0;
+  stroke-width: 6px;
+  stroke-linejoin: round;
+}
+
+/* Heritage tree node images: circular, enlarged, with dark green border */
+#tree.heritage .node image {
+  width: 112px;
+  height: 112px;
+  x: -56px;
+  y: -56px;
+  clip-path: circle(56px at center);
+  stroke: darkgreen;
+  stroke-width: 3px;
+}
+
+/* Refined chevron close-tab */
+.close-tab {
+  position: absolute;
+  top: 50%;
+  left: -40px; /* sticks out from the edge */
+  transform: translateY(-50%);
+  background: #f0f8ff; /* light background for contrast */
+  color: #2c3e50;      /* dark arrow for visibility */
+  font-size: 26px;     /* larger size for clarity */
+  font-weight: bold;
+  padding: 6px 10px;
+  border-radius: 6px 0 0 6px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.25); /* subtle shadow */
+}
+
+.close-tab:hover {
+  background: #e6f2ff; /* slightly darker on hover */
+  color: #1a252f;
+}
