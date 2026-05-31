@@ -37,6 +37,13 @@ body {
   width: 100%;
   height: calc(100vh - 80px);
   background: radial-gradient(circle at center, #fffbea, #e6f2ff, #99ccff);
+  overflow: hidden; /* prevents double scrollbars */
+}
+
+/* Ensure SVG fills container */
+#tree svg {
+  width: 100%;
+  height: 100%;
 }
 
 /* Heritage mode background */

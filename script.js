@@ -29,20 +29,48 @@ function loadTree(mode, lineageOption="gen5") {
     const root = d3.hierarchy(rootData);
 
     if (mode === "lineage") {
-      const width = 900, height = 700;
+      // const width = 900, height = 700;
+      // document.getElementById("tree").classList.remove("heritage");
+
+      // // Radial layout for lineage
+      // const radius = width / 2;
+      // const tree = d3.tree().size([2 * Math.PI, radius - 100]);
+      // tree(root);
+
+      // const svg = d3.select("#tree").append("svg")
+      //   .attr("width", width).attr("height", width)
+      //   .append("g").attr("transform", `translate(${radius},${radius})`);
+
       document.getElementById("tree").classList.remove("heritage");
 
+      let width, height, radius;
+      if (lineageOption === "complete") {
+        width = 1600; height = 1600;
+        radius = width / 2;
+      } else {
+        width = 900; height = 700;
+        radius = width / 2;
+      }
+
       // Radial layout for lineage
-      const radius = width / 2;
-      const tree = d3.tree().size([2 * Math.PI, radius - 100]);
+      const tree = d3.tree().size([2 * Math.PI, radius - (lineageOption === "complete" ? 200 : 100)]);
       tree(root);
 
       const svg = d3.select("#tree").append("svg")
-        .attr("width", width).attr("height", width)
-        .append("g").attr("transform", `translate(${radius},${radius})`);
+        .attr("width", width).attr("height", height);
+
+      const g = svg.append("g").attr("transform", `translate(${radius},${radius})`);
+
+      // Enable zoom/pan only for complete lineage
+      if (lineageOption === "complete") {
+        svg.call(d3.zoom().scaleExtent([0.5, 3]).on("zoom", (event) => {
+          g.attr("transform", event.transform);
+        }));
+      }
 
       // Links
-      svg.append("g").selectAll("path")
+      // svg.append("g").selectAll("path")
+      g.append("g").selectAll("path")
         .data(root.links())
         .join("path")
         .attr("d", d3.linkRadial()
@@ -63,7 +91,12 @@ function loadTree(mode, lineageOption="gen5") {
       }
 
       // Nodes
-      const nodeGroup = svg.append("g").selectAll("g")
+      // const nodeGroup = svg.append("g").selectAll("g")
+      //   .data(root.descendants())
+      //   .join("g")
+      //   .attr("transform", d => `rotate(${d.x * 180 / Math.PI - 90}) translate(${d.y},0)`);
+
+      const nodeGroup = g.append("g").selectAll("g")
         .data(root.descendants())
         .join("g")
         .attr("transform", d => `rotate(${d.x * 180 / Math.PI - 90}) translate(${d.y},0)`);
