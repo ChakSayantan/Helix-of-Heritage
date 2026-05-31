@@ -29,17 +29,6 @@ function loadTree(mode, lineageOption="gen5") {
     const root = d3.hierarchy(rootData);
 
     if (mode === "lineage") {
-      // const width = 900, height = 700;
-      // document.getElementById("tree").classList.remove("heritage");
-
-      // // Radial layout for lineage
-      // const radius = width / 2;
-      // const tree = d3.tree().size([2 * Math.PI, radius - 100]);
-      // tree(root);
-
-      // const svg = d3.select("#tree").append("svg")
-      //   .attr("width", width).attr("height", width)
-      //   .append("g").attr("transform", `translate(${radius},${radius})`);
 
       document.getElementById("tree").classList.remove("heritage");
 
@@ -53,7 +42,7 @@ function loadTree(mode, lineageOption="gen5") {
       }
 
       // Radial layout for lineage
-      const tree = d3.tree().size([2 * Math.PI, radius - (lineageOption === "complete" ? 200 : 100)]);
+      const tree = d3.tree().size([2 * Math.PI, radius - (lineageOption === "complete" ? 100 : 100)]);
       tree(root);
 
       const svg = d3.select("#tree").append("svg")
@@ -69,7 +58,6 @@ function loadTree(mode, lineageOption="gen5") {
       }
 
       // Links
-      // svg.append("g").selectAll("path")
       g.append("g").selectAll("path")
         .data(root.links())
         .join("path")
@@ -91,11 +79,6 @@ function loadTree(mode, lineageOption="gen5") {
       }
 
       // Nodes
-      // const nodeGroup = svg.append("g").selectAll("g")
-      //   .data(root.descendants())
-      //   .join("g")
-      //   .attr("transform", d => `rotate(${d.x * 180 / Math.PI - 90}) translate(${d.y},0)`);
-
       const nodeGroup = g.append("g").selectAll("g")
         .data(root.descendants())
         .join("g")
