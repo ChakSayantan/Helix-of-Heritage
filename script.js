@@ -69,11 +69,13 @@ function loadTree(mode, lineageOption="gen5") {
 
       // Colors per generation
       const generationColors = {};
-      const colorPalette = ["#f4a261", "#2a9d8f", "#e76f51", "#264653", "#8ab17d", "#a06cd5"];
       function getColor(depth) {
         if (!generationColors[depth]) {
-          const available = colorPalette.filter(c => !Object.values(generationColors).includes(c));
-          generationColors[depth] = available.length > 0 ? available[Math.floor(Math.random() * available.length)] : "#69b3a2";
+          // Generate muted, classy colors using HSL
+          const hue = (depth * 45) % 360;   // rotate hue for each generation
+          const saturation = 25;            // lower saturation for softer tones
+          const lightness = 50;             // mid-lightness for balance
+          generationColors[depth] = `hsl(${hue}, ${saturation}%, ${lightness}%)`;
         }
         return generationColors[depth];
       }
