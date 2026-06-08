@@ -48,7 +48,7 @@ body {
 
 /* Heritage mode background */
 #tree.heritage {
-  background: url("images/tree_background.png") no-repeat center center;
+  background: url("Images/tree_background.png") no-repeat center center;
   background-size: cover;
 }
 
